@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Courses</title>
+</head>
+
+<body class="font-sans">
+  <header class="text-gray-600 body-font">
+    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+      <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+        <span class="ml-3 text-xl">Code_Spot</span>
+      </a>
+      <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center font-sans">
+            <a class="mr-12 text-gray-600 hover:text-black hover:underline" title="Home" href="welcome.html">Home</a>
+            <a class="mr-12 text-gray-600 hover:text-black hover:underline" title="Courses" href="courses.html"><b>Courses</b></a>
+            <a class="mr-12 text-gray-600 hover:text-black hover:underline" title="Feedback" href="feedback.html">Feedback</a>
+            <div class="dropdown">
+              <button class="dropbtn">
+                <div class="mr-8 text-gray-600 hover:text-black hover:underline">Profile</div>
+              </button>
+              <div class="dropdown-content">
+                <a class="text-gray-600 hover:text-black hover:underline" href="#">{{ email }}</a>
+                <hr>
+                <a class="text-gray-600 hover:text-black hover:underline" href="/logout">Log Out</a>
+              </div>
+            </div> 
+      </nav>
+    </div>
+  </header>
+
+
+  <style>
+    .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  
+    .dropdown .dropbtn {
+      font-size: 17px;    
+      border: none;
+      outline: none;
+      color: rgb(0, 0, 0);
+      margin: 0;
+    }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff; 
+    min-width: 10px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    float: none;
+    /* color: black; */
+    padding: 10px 14px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+    </style>
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+      </script>
+  
+  <hr><hr>
+
+  <section class="text-gray-600 body-font">
+    <div class="container px-5 py-12 mx-auto">
+      <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
+      
+        <div class="flex flex-col text-center w-full mb-7 my-5">
+            <h1 class="text-2xl font-medium title-font mb-4 text-black hover:cursor-pointer">Languages</h1>
+        </div>
+        <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
+    
+            <div class="p-4 md:w-1/4 sm:mb-0 mb-6 hover:drop-shadow-2xl">
+            <div class="rounded-lg h-64 overflow-hidden">
+                <img alt="content" class="object-cover object-center h-full w-full" src="{{url_for('static', filename='images/Languages/c.jpg')}}">
+            </div>
+            <h2 class="text-xl font-medium title-font text-gray-900 mt-5">C Language</h2>
+            <button class="flex mx-auto mt-6 text-black bg-white border-0 py-2 px-5 focus:outline-none hover:bg-blue-400 hover:text-white rounded drop-shadow-2xl"><a href="Languages/c.html" class="">Let's Begin</a></button>
+            </div>
+    
+            <div class="p-4 md:w-1/4 sm:mb-0 mb-6 hover:drop-shadow-2xl">
+            <div class="rounded-lg h-64 overflow-hidden">
+                <img alt="content" class="object-cover object-center h-full w-full" src="{{url_for('static', filename='images/Languages/c++.jpg')}}">
+            </div>
+            <h2 class="text-xl font-medium title-font text-gray-900 mt-5">CPP Language</h2>
+            <button class="flex mx-auto mt-6 text-black bg-white border-0 py-2 px-5 focus:outline-none hover:bg-blue-400 hover:text-white rounded drop-shadow-2xl"><a href="Languages/cpp.html" class="">Let's Begin</a></button>
+            </div>
+
+            <div class="p-4 md:w-1/4 sm:mb-0 mb-6 hover:drop-shadow-2xl">
+              <div class="rounded-lg h-64 overflow-hidden">
+                  <img alt="content" class="object-cover object-center h-full w-full" src="{{url_for('static', filename='images/Languages/python.jpg')}}">
+              </div>
+              <h2 class="text-xl font-medium title-font text-gray-900 mt-5">Python Language</h2>
+              <button class="flex mx-auto mt-6 text-black bg-white border-0 py-2 px-5 focus:outline-none hover:bg-blue-400 hover:text-white rounded drop-shadow-2xl"><a href="Languages/python.html" class="">Let's Begin</a></button>
+            </div>
+    
+            <div class="p-4 md:w-1/4 sm:mb-0 mb-6 hover:drop-shadow-2xl">
+            <div class="rounded-lg h-64 overflow-hidden">
+                <img alt="content" class="object-cover object-center h-full w-full" src="{{url_for('static', filename='images/Languages/java.jpg')}}">
+            </div>
+            <h2 class="text-xl font-medium title-font text-gray-900 mt-5">Java Language</h2>
+            <button class="flex mx-auto mt-6 text-black bg-white border-0 py-2 px-5 focus:outline-none hover:bg-blue-400 hover:text-white rounded drop-shadow-2xl"><a href="Languages/java.html" class="">Let's Begin</a></button>
+            </div>
+    
+        </div>
+    </div>
+  </section>
+
+
+  <section class="text-gray-600 body-font">
+    <div class="container px-5 py-12 mx-auto">
+      <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
+      
+        <div class="flex flex-col text-center w-full mb-7 my-5">
+            <h1 class="text-2xl font-medium title-font mb-4 text-black hover:cursor-pointer">Development</h1>
+        </div>
+        <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
+    
+            <div class="p-4 md:w-1/4 sm:mb-0 mb-6 hover:drop-shadow-2xl">
+            <div class="rounded-lg h-64 overflow-hidden">
+                <img alt="content" class="object-cover object-center h-full w-full" src="{{url_for('static', filename='images/development/FED.jpg')}}">
+            </div>
+            <h2 class="text-xl font-medium title-font text-gray-900 mt-5">Front End Development</h2>
+            <button class="flex mx-auto mt-6 text-black bg-white border-0 py-2 px-5 focus:outline-none hover:bg-blue-400 hover:text-white rounded drop-shadow-2xl"><a href="development/fed.html" class="">Let's Begin</a></button>
+            </div>
+    
+            <div class="p-4 md:w-1/4 sm:mb-0 mb-6 hover:drop-shadow-2xl">
+            <div class="rounded-lg h-64 overflow-hidden">
+                <img alt="content" class="object-cover object-center h-full w-full" src="{{url_for('static', filename='images/development/BED.jpg')}}">
+            </div>
+            <h2 class="text-xl font-medium title-font text-gray-900 mt-5">Back End Development
+            </h2>
+            <button class="flex mx-auto mt-6 text-black bg-white border-0 py-2 px-5 focus:outline-none hover:bg-blue-400 hover:text-white rounded drop-shadow-2xl"><a href="development/bed.html" class="">Let's Begin</a></button>
+            </div>
+
+            <div class="p-4 md:w-1/4 sm:mb-0 mb-6 hover:drop-shadow-2xl">
+              <div class="rounded-lg h-64 overflow-hidden">
+                  <img alt="content" class="object-cover object-center h-full w-full" src="{{url_for('static', filename='images/development/DS.jpg')}}">
+              </div>
+              <h2 class="text-xl font-medium title-font text-gray-900 mt-5">Data Science</h2>
+              <button class="flex mx-auto mt-6 text-black bg-white border-0 py-2 px-5 focus:outline-none hover:bg-blue-400 hover:text-white rounded drop-shadow-2xl"><a href="development/ds.html" class="">Let's Begin</a></button>
+            </div>
+    
+            <div class="p-4 md:w-1/4 sm:mb-0 mb-6 hover:drop-shadow-2xl">
+            <div class="rounded-lg h-64 overflow-hidden">
+                <img alt="content" class="object-cover object-center h-full w-full" src="{{url_for('static', filename='images/development/ML.jpg')}}">
+            </div>
+            <h2 class="text-xl font-medium title-font text-gray-900 mt-5">Machine Language</h2>
+            <button class="flex mx-auto mt-6 text-black bg-white border-0 py-2 px-5 focus:outline-none hover:bg-blue-400 hover:text-white rounded drop-shadow-2xl"><a href="development/ml.html" class="">Let's Begin</a></button>
+            </div>
+    
+        </div>
+    </div>
+  </section>
+
+  <section class="text-gray-600 body-font">
+    <div class="container px-5 py-12 mx-auto">
+      <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
+      
+        <div class="flex flex-col text-center w-full mb-7 my-5">
+            <h1 class="text-2xl font-medium title-font mb-4 text-black hover:cursor-pointer">Data Structure And Algorithm</h1>
+        </div>
+        <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
+    
+            <div class="p-4 md:w-1/4 sm:mb-0 mb-6 hover:drop-shadow-2xl">
+            <div class="rounded-lg h-64 overflow-hidden">
+                <img alt="content" class="object-cover object-center h-full w-full" src="{{url_for('static', filename='images/dsa/s.jpg')}}">
+            </div>
+            <h2 class="text-xl font-medium title-font text-gray-900 mt-5">Stack</h2>
+            <button class="flex mx-auto mt-6 text-black bg-white border-0 py-2 px-5 focus:outline-none hover:bg-blue-400 hover:text-white rounded drop-shadow-2xl"><a href="dsa/stack.html" class="">Let's Begin</a></button>
+            </div>
+    
+            <div class="p-4 md:w-1/4 sm:mb-0 mb-6 hover:drop-shadow-2xl">
+            <div class="rounded-lg h-64 overflow-hidden">
+                <img alt="content" class="object-cover object-center h-full w-full" src="{{url_for('static', filename='images/dsa/q.jpg')}}">
+            </div>
+            <h2 class="text-xl font-medium title-font text-gray-900 mt-5">Queue</h2>
+            <button class="flex mx-auto mt-6 text-black bg-white border-0 py-2 px-5 focus:outline-none hover:bg-blue-400 hover:text-white rounded drop-shadow-2xl"><a href="dsa/queue.html" class="">Let's Begin</a></button>
+            </div>
+
+            <div class="p-4 md:w-1/4 sm:mb-0 mb-6 hover:drop-shadow-2xl">
+              <div class="rounded-lg h-64 overflow-hidden">
+                  <img alt="content" class="object-cover object-center h-full w-full" src="{{url_for('static', filename='images/dsa/ll.jpg')}}">
+              </div>
+              <h2 class="text-xl font-medium title-font text-gray-900 mt-5">Linked List</h2>
+              <button class="flex mx-auto mt-6 text-black bg-white border-0 py-2 px-5 focus:outline-none hover:bg-blue-400 hover:text-white rounded drop-shadow-2xl"><a href="dsa/ll.html" class="">Let's Begin</a></button>
+            </div>
+    
+            <div class="p-4 md:w-1/4 sm:mb-0 mb-6 hover:drop-shadow-2xl">
+            <div class="rounded-lg h-64 overflow-hidden">
+                <img alt="content" class="object-cover object-center h-full w-full" src="{{url_for('static', filename='images/dsa/qnt.jpg')}}">
+            </div>
+            <h2 class="text-xl font-medium title-font text-gray-900 mt-5">Graph & Tree</h2>
+            <button class="flex mx-auto mt-6 text-black bg-white border-0 py-2 px-5 focus:outline-none hover:bg-blue-400 hover:text-white rounded drop-shadow-2xl"><a href="dsa/gnt.html" class="">Let's Begin</a></button>
+            </div>
+    
+        </div>
+    </div>
+  </section>
+
+  <hr>
+
+  <footer class="text-gray-600 body-font bg-white">
+    <div class="container px-5 py-4 mx-auto flex items-center sm:flex-row flex-col">
+      <a class="flex title-font font-medium items-center md:justify-start justify-center text-black">
+        <span class="ml-3 text-xl">Code_Spot</span>
+      </a>
+      <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">© 2022 —
+        <a href="https://twitter.com/" class="text-gray-500 ml-1" rel="noopener noreferrer" target="_blank">@Code_Spot</a>
+      </p>
+      <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+        <a class="text-gray-400" href="https://facebook.com/">
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+          </svg>
+        </a>
+        <a class="ml-3 text-gray-400" href="https://twitter.com/">
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+          </svg>
+        </a>
+        <a class="ml-3 text-gray-400" href="https://instagram.com/">
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+          </svg>
+        </a>
+        <a class="ml-3 text-gray-400" href="https://www.linkedin.com/">
+          <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+            <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+            <circle cx="4" cy="4" r="2" stroke="none"></circle>
+          </svg>
+        </a>
+      </span>
+    </div>
+  </footer>
